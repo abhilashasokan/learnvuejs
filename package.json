@@ -1,0 +1,19 @@
+{
+  "name": "Growler",
+  "version": "1.0.0",
+  "description": "sample app demo",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.17.0",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1",
+    "vue": "^2.5.2",
+    "vue-axios": "^2.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

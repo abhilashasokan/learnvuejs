@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Growler</title>
+	<script type="text/javascript" src="/node_modules/vue/dist/vue.min.js"></script>
+	<script type="text/javascript" src="/node_modules/vue-axios/dist/vue-axios.min.js"></script>
+	<script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">           
+	<link rel="stylesheet" type="text/css" href="/public/css/style.css ">
+
+</head>
+<body>
+
+<div id="growler">
+	<!-- Semantic Binding (Interploation) --> 
+	<h2>Welcome to my demo on {{ appName }} - {{ appVersion }} </h2>
+	<!-- Declarative binding -->
+	<h2 v-text="appName"></h2>
+	<!-- Once directive binding (Wont change after initialization) -->
+	<h2 v-once>{{appName}}</h2>
+
+	<!-- HTML binding to container -->
+	<h2 v-html="appUrl"></h2>
+	<img :src="appLogo" alt="Growler" title="Growler" style="height: 50px;">
+
+	<!-- <h2 :style="{color:color}">{{appName}}</h2> -->
+	<!-- <h2 :style="{color:color, fontFamily: appFontFamily, margin:0}">{{appName}}</h2> -->
+	<h2 :class="{'header':true, 'accent-color':isOnline}">{{appName}}</h2>
+
+</div>
+
+<script type="text/javascript">
+	var growler = new Vue({
+	    el: '#growler',
+	    data: {
+	    	appName 		: 'Growler',
+	    	appVersion 		: '1.0.0',
+	    	appUrl			: '<a href="http://google.com">v-once example</a>',
+	    	appLogo			: '/public/images/logo.png',
+	    	isOnline 		:false,
+	    }
+	});
+</script> 
+
+</body> 
+</html>
